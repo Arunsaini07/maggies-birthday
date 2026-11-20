@@ -1,0 +1,6 @@
+{
+  "name": "Maggie's Birthday – Velvet & Keepsake",
+  "description": "A luxury editorial and interactive birthday experience for Maggie featuring Vogue Special Edition, tactile memory scrapbook, split-flap countdown, ambient music player, celebration confetti, and administrative suite.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

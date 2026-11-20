@@ -1,0 +1,6 @@
+{
+  "summary":  "Implementation plan for adding a pre-app Velvet & Keepsake email/password authentication gate (Sign In & Sign Up) backed by MongoDB and persistent local fallback storage, separate from the Admin Suite.",
+  "updatedAt":  "2026-11-13T19:33:03.259012403Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

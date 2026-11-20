@@ -1,0 +1,318 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-surface: #fcf9f3;
+    --color-surface-dim: #dcdad4;
+    --color-card: #FAF6F0;
+    --color-text: #1c1c18;
+    --color-primary: #871321;
+    --color-wine: #590A14;
+    --color-gold: #D4AF37;
+    --color-gold-light: #F3E5AB;
+    --color-noir: #1A1A1A;
+    --color-parchment: #F9F6F0;
+    --color-parchment-deep: #F3ECE2;
+    --color-ruby: #C41E3A;
+  }
+
+  .dark {
+    --color-surface: #120609;
+    --color-surface-dim: #2b1319;
+    --color-card: #1c0b10;
+    --color-text: #f5efe6;
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: 'Lora', 'Plus Jakarta Sans', Georgia, serif;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    overflow-x: hidden;
+  }
+}
+
+.font-bodoni {
+  font-family: 'Cormorant Garamond', 'Bodoni Moda', Georgia, serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.font-playfair {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-mono-split {
+  font-family: 'Space Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.font-stylish {
+  font-family: 'Great Vibes', 'Playfair Display', Georgia, cursive;
+}
+
+.font-handwriting {
+  font-family: 'Dancing Script', 'Playfair Display', cursive;
+}
+
+/* Texture overlays */
+.parchment-pattern {
+  background-color: #fbf8f2;
+  background-image: radial-gradient(#dfbfbe 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.5px, #fbf8f2 0.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.velvet-gradient {
+  background: radial-gradient(circle at 50% 20%, #871321 0%, #590A14 60%, #2b040a 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #e6ca65 0%, #D4AF37 50%, #aa8210 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.polaroid-shadow {
+  box-shadow: 0 16px 32px -8px rgba(35, 20, 15, 0.22), 0 4px 12px -2px rgba(35, 20, 15, 0.12);
+}
+
+.wax-seal-shadow {
+  box-shadow: 0 10px 25px -4px rgba(135, 19, 33, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.35);
+}
+
+.flip-card-shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Flipbook 3D Perspective & Depth Styles */
+.perspective-book {
+  perspective: 2600px;
+  perspective-origin: center center;
+  transform-style: preserve-3d;
+}
+
+.book-chassis-shadow {
+  box-shadow:
+    0 25px 60px -15px rgba(0, 0, 0, 0.5),
+    0 10px 25px -10px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(212, 175, 55, 0.25);
+}
+
+.book-shadow {
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.45), 0 18px 36px -18px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(212, 175, 55, 0.3);
+}
+
+.book-spine-crease {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.1) 4%,
+    transparent 12%,
+    transparent 88%,
+    rgba(0, 0, 0, 0.1) 96%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.origin-left-spine {
+  transform-origin: 0% 50%;
+}
+
+.origin-right-spine {
+  transform-origin: 100% 50%;
+}
+
+/* Page curl highlight effect */
+.page-curl-corner {
+  background: linear-gradient(135deg, transparent 75%, rgba(212, 175, 55, 0.2) 85%, rgba(255, 255, 255, 0.6) 100%);
+}
+
+/* GPU-composited 3D Page Flips (transform only — zero shadow repainting) */
+@keyframes pageFlipForward {
+  0% {
+    transform: rotateY(0deg) translateZ(1px);
+  }
+  50% {
+    transform: rotateY(-90deg) scale3d(1.02, 1.01, 1) translateZ(18px);
+  }
+  100% {
+    transform: rotateY(-180deg) translateZ(1px);
+  }
+}
+
+@keyframes pageFlipBackward {
+  0% {
+    transform: rotateY(0deg) translateZ(1px);
+  }
+  50% {
+    transform: rotateY(90deg) scale3d(1.02, 1.01, 1) translateZ(18px);
+  }
+  100% {
+    transform: rotateY(180deg) translateZ(1px);
+  }
+}
+
+@keyframes flipShadowCurve {
+  0%, 100% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.42;
+  }
+}
+
+.animate-flip-shadow {
+  animation: flipShadowCurve 580ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Section-level paint & layout skipping when scrolled off-screen */
+.section-lazy-paint {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 760px;
+}
+
+/* GPU-only Filmstrip Marquee */
+@keyframes filmstripScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-filmstrip {
+  will-change: transform;
+  animation: filmstripScroll 42s linear infinite;
+}
+
+.group\/filmstrip:hover .animate-filmstrip {
+  animation-play-state: paused !important;
+}
+
+/* Romantic Ambient Floating Petals / Hearts (transform + opacity only) */
+@keyframes romanticFloatUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0) scale(0.85) rotate(-6deg);
+  }
+  18% {
+    opacity: 0.72;
+  }
+  55% {
+    transform: translate3d(12px, -48px, 0) scale(1) rotate(6deg);
+  }
+  85% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-8px, -110px, 0) scale(0.9) rotate(-4deg);
+  }
+}
+
+.animate-romantic-float {
+  animation: romanticFloatUp var(--float-duration, 9s) ease-in-out var(--float-delay, 0s) infinite;
+}
+
+/* Tender Heartbeat Pulse */
+@keyframes heartbeatGentle {
+  0%, 100% {
+    transform: scale3d(1, 1, 1);
+  }
+  14% {
+    transform: scale3d(1.09, 1.09, 1);
+  }
+  28% {
+    transform: scale3d(1, 1, 1);
+  }
+  42% {
+    transform: scale3d(1.06, 1.06, 1);
+  }
+  70% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.animate-heartbeat-gentle {
+  animation: heartbeatGentle 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+/* Silky Candle Flame Flicker (transform only, zero filter blur animation) */
+@keyframes candleFlicker {
+  0%, 100% {
+    transform: scale3d(1, 1, 1) rotate(-1.5deg);
+  }
+  33% {
+    transform: scale3d(0.96, 1.09, 1) rotate(2deg);
+  }
+  66% {
+    transform: scale3d(1.04, 0.96, 1) rotate(-1deg);
+  }
+}
+
+.animate-candle-flicker {
+  transform-origin: 50% 85%;
+  animation: candleFlicker 1.9s ease-in-out infinite;
+}
+
+/* Luxury Pendulum Sway */
+@keyframes pendulumSway {
+  0%, 100% {
+    transform: rotate(-0.9deg);
+  }
+  50% {
+    transform: rotate(0.9deg);
+  }
+}
+
+.animate-pendulum {
+  transform-origin: 50% 0%;
+  animation: pendulumSway 6.5s ease-in-out infinite;
+}
+
+.group:hover.animate-pendulum {
+  animation-play-state: paused !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-filmstrip,
+  .animate-romantic-float,
+  .animate-heartbeat-gentle,
+  .animate-candle-flicker,
+  .animate-pendulum {
+    animation: none;
+  }
+}

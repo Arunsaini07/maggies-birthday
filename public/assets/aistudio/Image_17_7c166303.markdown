@@ -1,0 +1,220 @@
+---
+name: Velvet & Keepsake
+colors:
+  surface: '#fcf9f3'
+  surface-dim: '#dcdad4'
+  surface-bright: '#fcf9f3'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f6f3ed'
+  surface-container: '#f0eee8'
+  surface-container-high: '#ebe8e2'
+  surface-container-highest: '#e5e2dc'
+  on-surface: '#1c1c18'
+  on-surface-variant: '#584140'
+  inverse-surface: '#31312d'
+  inverse-on-surface: '#f3f0ea'
+  outline: '#8c7170'
+  outline-variant: '#dfbfbe'
+  surface-tint: '#ac3039'
+  primary: '#630011'
+  on-primary: '#ffffff'
+  primary-container: '#871321'
+  on-primary-container: '#ff9292'
+  inverse-primary: '#ffb3b1'
+  secondary: '#735c00'
+  on-secondary: '#ffffff'
+  secondary-container: '#fed65b'
+  on-secondary-container: '#745c00'
+  tertiary: '#620015'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#8c0021'
+  on-tertiary-container: '#ff9195'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ffdad8'
+  primary-fixed-dim: '#ffb3b1'
+  on-primary-fixed: '#410008'
+  on-primary-fixed-variant: '#8b1724'
+  secondary-fixed: '#ffe088'
+  secondary-fixed-dim: '#e9c349'
+  on-secondary-fixed: '#241a00'
+  on-secondary-fixed-variant: '#574500'
+  tertiary-fixed: '#ffdad9'
+  tertiary-fixed-dim: '#ffb3b4'
+  on-tertiary-fixed: '#40000a'
+  on-tertiary-fixed-variant: '#920023'
+  background: '#fcf9f3'
+  on-background: '#1c1c18'
+  surface-variant: '#e5e2dc'
+typography:
+  display-hero:
+    fontFamily: Bodoni Moda
+    fontSize: 72px
+    fontWeight: '400'
+    lineHeight: 80px
+    letterSpacing: -0.02em
+  display-hero-mobile:
+    fontFamily: Bodoni Moda
+    fontSize: 42px
+    fontWeight: '400'
+    lineHeight: 48px
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Bodoni Moda
+    fontSize: 48px
+    fontWeight: '600'
+    lineHeight: 54px
+    letterSpacing: -0.01em
+  headline-lg-mobile:
+    fontFamily: Bodoni Moda
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 38px
+  headline-md:
+    fontFamily: Bodoni Moda
+    fontSize: 32px
+    fontWeight: '400'
+    lineHeight: 38px
+  script-accent:
+    fontFamily: Playfair Display
+    fontSize: 26px
+    fontWeight: '400'
+    lineHeight: 36px
+    letterSpacing: 0.04em
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 13px
+    fontWeight: '500'
+    lineHeight: 20px
+  counter-digits:
+    fontFamily: Space Mono
+    fontSize: 44px
+    fontWeight: '700'
+    lineHeight: 48px
+    letterSpacing: 0.05em
+  label-caps:
+    fontFamily: Space Mono
+    fontSize: 11px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.25em
+  label-ui:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.08em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 3rem
+  margin-mobile: 1.25rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+  space-2xl: 4rem
+---
+
+## Brand & Style
+
+This design system synthesizes high-fashion editorial prestige with tactile, nostalgic romance. Drawing inspiration from luxury print publications, theatrical curtain calls, and sentimental scrapbooks, it bridges physical touchpoints—such as deckled paper edges, spiral-bound journals, ribbon ties, polaroids pinned with lacquer red hearts, and split-flap mechanical counters—with refined, high-end digital ergonomics.
+
+The emotional tone is deeply intimate, reverent, celebratory, and unapologetically romantic. It serves users crafting bespoke milestones, anniversary retrospectives, birthday tributes, and experiential digital keepsakes.
+
+The aesthetic belongs to an **Editorial Tactile / Romantic Skeuomorphic** movement. It balances stark, pristine typographic layouts and delicate hairline geometry with lush skeuomorphic layers: heavy velvet drapery, soft paper grain, warm gilded accents, and layered ephemera.
+
+## Colors
+
+The palette revolves around deep dramatic reds, antique parchment neutrals, warm gilded metallics, and grounding carbon black.
+
+### Palette Architecture
+- **Primary (`#871321`):** Deep theatre crimson. Used for hero accent buttons, rich velvet drape backgrounds, key romantic callouts, and dramatic emphasis. Supported by deep wine (`#590A14`) for shadows and vivid ruby (`#C41E3A`) for heart pins and active micro-states.
+- **Secondary (`#D4AF37`):** Vintage bullion gold. Applied to delicate filigree flourishes, celebratory badges, borders, divider diamonds, and secondary interactive accents (`#C69214`, `#FFA500`).
+- **Tertiary (`#C41E3A`):** Vivid lacquer red. Reserved for 3D heart pins, ribbon tie details, and micro-delights.
+- **Neutral Base (`#F9F6F0`):** Antique warm ivory. The default canvas surface, mirroring premium heavyweight editorial stock. Supported by parchment cream (`#F3ECE2`) for notebook spreads and sepia edge borders (`#E8DFD1`).
+- **Charcoal / Noir (`#1A1A1A` / `#111111`):** High-contrast editorial ink. Used for high-fashion headline typography, split-flap flip clock backgrounds, lanyard straps, and pill-shaped navigation docks.
+
+## Typography
+
+Typography establishes an editorial tension between grand haute-couture titles, soft humanistic body copy, and mechanical timing digits:
+
+1. **Editorial Serifs (`Bodoni Moda` & `Playfair Display`):** Bodoni Moda provides dramatic vertical stress and hairline serifs for magazine titles, cover mastheads, and dramatic hero greetings. Playfair Display (italicized with flourishes) acts as the romantic conversational voice for quotes, dedications, and sentimental chapter headers.
+2. **Contemporary Clean Sans (`Plus Jakarta Sans`):** Serves as an unobtrusive, highly legible layer for conversational captions, narrative descriptions, and UI actions.
+3. **Mechanical Monospace (`Space Mono`):** Dedicated to technical metadata, tracking stamps, admission pass numbers, and the retro countdown flip-clock displays.
+
+## Layout & Spacing
+
+The layout is grounded in a **12-column responsive grid** layered beneath an intentional **freeform tactile canvas**.
+
+- **Desktop (1024px+):** Standard 12-column grid with `3rem` margins and `1.5rem` gutters. Magazine covers and scrapbook spreads anchor to central reading widths (max-width `1180px`), allowing Polaroid cascades and tape ephemera to playfully drift outside standard column gutters.
+- **Tablet (768px - 1023px):** 8-column layout with `2rem` page margins. Notebook bindings reflow from open dual-spreads to single portrait folios.
+- **Mobile (< 768px):** 4-column layout with `1.25rem` margin. Interactive scrapbook artifacts transition into swipeable, stacked carousel layers.
+
+Vertical pacing employs exaggerated breathing room (`space-2xl` between editorial sections) contrasted with compact, physical proximity inside polaroid frames and sticker clusters (`space-xs` to `space-sm`).
+
+## Elevation & Depth
+
+Visual depth is conveyed through tactile skeuomorphism and directional cast shadows rather than flat digital elevation:
+
+- **Level 0 (Parchment Foundation):** The flat canvas surface (`#F9F6F0`), overlaid with micro graph-grid paper (16px faint line intersections) or deep velvet theater folds.
+- **Level 1 (Submerged Ephemera):** Washi tapes, vintage newspaper clippings, and torn paper scraps sitting directly flush with faint contact occlusions: `0 1px 3px rgba(26, 26, 26, 0.08)`.
+- **Level 2 (Photographic Plates & Keepsakes):** Polaroids, VIP badges, and notebook pages cast angled, soft-spread sunlight shadows: `0 12px 28px -6px rgba(26, 17, 10, 0.18), 0 4px 10px -2px rgba(26, 17, 10, 0.08)`.
+- **Level 3 (Floating UI Elements & Pinned Accents):** Dark floating pill toolbars, red lacquer heart pins, and 3D ribbon bows. Features sharp underside drop-shadows combined with soft ambient diffusion: `0 16px 36px -4px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.15)`.
+- **Gloss & Specular Sheen:** Polaroids and lacquer pins feature a delicate diagonal gradient highlight overlay (`linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%)`).
+
+## Shapes
+
+The design system maintains strict editorial geometry softened by physical curves:
+
+- **Rectilinear Precision (`roundedness: 0 to 1`):** Book pages, magazine mockups, torn clipping boundaries, and polaroid outer borders adhere to crisp, near-zero radii (`2px` to `4px`) to preserve authentic print characteristics.
+- **Mechanical & UI Pills (`roundedness: 3`):** Interactive floating control bars, flip clock housings, and category pills utilize full rounded ends (`9999px`).
+- **Rotational Play:** Scrapbook items break rigid digital grids through micro-rotations ranging from `-6deg` to `+6deg`, evoking authentic human arrangement.
+
+## Components
+
+### Buttons
+- **Primary Theater Action:** Deep crimson (`#871321`) or charcoal (`#1A1A1A`) background, pill-shaped, enclosed with a delicate `1px` inner border of bullion gold (`#D4AF37`) at 40% opacity. Text is styled in uppercase `label-ui` with subtle gold shimmer on hover.
+- **Ghost / Editorial Secondary:** Transparent background, `1px` solid border (`#1A1A1A` or `#D4AF37`), subtle serif or uppercase sans label with `space-sm` horizontal padding.
+
+### Floating Dock & Navigation Pills
+- Dark glass/noir shell (`#1A1A1A` at 92% opacity with `backdrop-filter: blur(12px)`).
+- Full pill curvature (`9999px`). Contains segmented tactile triggers separated by vertical hairline dividers (`rgba(255, 255, 255, 0.15)`).
+
+### Polaroid Photo Cards
+- Heavy warm-ivory border (`#FFFFFF` to `#FDFCF7`) with asymmetrical bottom padding (top/sides: `12px`, bottom: `40px` to `48px`).
+- Rotated dynamically between `-4deg` and `+5deg`.
+- Pinned at top corners with a 3D red heart pin (`#C41E3A`) or translucent washi tape strip.
+- Subtitle captions rendered in casual cursive or neat handwriting-style type in charcoal ink.
+
+### Flip-Clock Digital Countdown
+- Dual split-plate counters encased in dark leatherette/charcoal modules (`#1A1A1A`) with a central 1px horizontal split seam.
+- High-contrast cream/ivory digits (`#F9F6F0`) rendered in `counter-digits` with subtle radial inset shading simulating mechanical drum flaps.
+
+### VIP Event Badge & Keepsake Pass
+- Vertical rounded card (`16px` corner radius) hanging from a branded lanyard strap texture.
+- Cream parchment body adorned with sacred geometric gold line art, minimal barcode metadata, and high-fashion portrait framing.
+
+### Scrapbook Ephemera (Stickers & Pins)
+- **3D Heart Pins:** Glossy ruby spheres with dimensional radial highlights and deep drop-shadows pinned onto image corners.
+- **Tape Strips:** Semi-transparent beige strips (`rgba(243, 236, 226, 0.75)`) with ragged edge masks affixed across photos.
